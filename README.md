@@ -18,6 +18,7 @@ This project demonstrates the capabilities of code sharing via Kotlin. The appli
 ## ✨ Features
 * **Fluid Calculations**: Standard operations, percentage handling, and sign inversion (+/-).
 * **Theme Persistence**: Your favorite theme is saved locally and automatically restored upon the next launch.
+* * **Theme** : Apple Basic / DanDaDan / CyberPunk Edgerunners / ChainsawMan Denji / JJK : Gojo Satoru / Kuromi
 * **Persistent History**: A side panel (Drawer) keeps your last 30 calculations, even after closing the application.
 * **Precise Control (AC/C)**:
     * **Single Click on C**: Deletes the last character entered.
