@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            background-image: url('back.png');
+            background-size: 130% 150%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #compose-visual-root {
+            width: 100%;
+            height: 100dvh;
+            background-color: black;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        @media (min-width: 500px) {
+            #compose-visual-root {
+                width: 375px;
+                height: 812px;
+                max-height: 90vh;
+                border-radius: 40px;
+                border: 8px solid #333;
+                overflow: hidden;
+            }
+        }
+
+        @media (max-width: 499px) {
+            html, body {
+                display: block !important;
+                background-color: black !important;
+                background-image: none !important;
+            }
+
+            #compose-visual-root {
+                width: 100% !important;
+                height: 100% !important;
+                height: 100dvh !important;
+                border-radius: 0 !important;
+                border: none !important;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+    }
+    </style>
+    <title>Skatt Calculator</title>
+    <link rel="manifest" href="manifest.json">
+    <script type="application/javascript" src="composeApp.js"></script>
+</head>
+<body>
+<div id="compose-visual-root"></div>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js');
+        });
+    }
+</script>
+</body>
+</html>
