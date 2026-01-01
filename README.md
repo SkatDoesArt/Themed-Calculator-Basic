@@ -4,7 +4,7 @@
 
 A modern, elegant, and lightning-fast calculator developed with **Kotlin Multiplatform (KMP)** and **Compose Multiplatform**. This project harnesses the power of **Kotlin/Wasm** to deliver a smooth experience directly in your browser as a Progressive Web App (PWA).
 
-<img src="Reference/homePage.png" alt="PCview">
+<img src="Reference/HomePage.png" alt="PCview">
 
 ---
 
