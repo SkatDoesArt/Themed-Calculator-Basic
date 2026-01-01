@@ -1,50 +1,58 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Desktop (JVM).
-
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-    - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-    - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-      For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-      the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-      Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-      folder is the appropriate location.
-
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
-
-### Build and Run Android Application
-
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
-
-### Build and Run Desktop (JVM) Application
-
-To build and run the development version of the desktop app, use the run configuration from the run widget
-in your IDE’s toolbar or run it directly from the terminal:
-
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:run
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:run
-  ```
-
-### Build and Run iOS Application
-
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+# 🧮 SkatCalculator PWA
 
 ---
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+A modern, elegant, and lightning-fast calculator developed with **Kotlin Multiplatform (KMP)** and **Compose Multiplatform**. This project harnesses the power of **Kotlin/Wasm** to deliver a smooth experience directly in your browser as a Progressive Web App (PWA).
+
+---
+
+## 🌟 Project Summary
+This project demonstrates the capabilities of code sharing via Kotlin. The application adapts dynamically based on the device: it features a stylized immersive background on desktop and an "Edge-to-Edge" full-screen interface on mobile for total immersion.
+
+* **Technology**: Kotlin/Wasm (WebAssembly) for native-like performance on the Web.
+* **Interface**: Fully customized Material Design 3.
+* **Portability**: Installable on iOS, Android, Windows, and Mac thanks to PWA support.
+
+---
+
+## ✨ Features
+* **Fluid Calculations**: Standard operations, percentage handling, and sign inversion (+/-).
+* **Theme Persistence**: Your favorite theme is saved locally and automatically restored upon the next launch.
+* **Persistent History**: A side panel (Drawer) keeps your last 30 calculations, even after closing the application.
+* **Precise Control (AC/C)**:
+    * **Single Click on C**: Deletes the last character entered.
+    * **Long Press on AC/C**: Full reset of the calculator.
+* **Adaptive Display**: Perfect centering on PC and borderless full-screen mode on mobile.
+
+---
+
+## 🚀 Development & Build Commands
+
+Here are the essential commands to manage and test the project:
+
+### 🛠️ Local Testing (Development)
+To launch the app with Hot Reload and debug tools:
+```bash
+./gradlew wasmJsBrowserDevelopmentRun --no-build-cache
+```
+
+### 📦 Build for Production
+To generate optimized files for deployment (GitHub Pages, Vercel, etc.):
+```bash
+./gradlew wasmJsBrowserDistribution --no-build-cache
+```
+Note: The --no-build-cache option is recommended to ensure every build includes your latest changes without conflicts from old cache.
+
+---
+## 💡 Useful Tips
+
+### 📱 PWA Installation
+The application is a certified PWA. To install it:
+-> On iOS (Safari): Tap "Share" then "Add to Home Screen".
+-> On Android (Chrome): Follow the installation banner or click the three dots > "Install App".
+-> On PC: Click the installation icon in the browser address bar.
+
+###⚠️ File Management on Windows
+Kotlin Multiplatform development generates very deep file structures (especially in .gradle), which can cause "Path too long" errors on Windows.
+-> Tip: Never manually copy the build/ folder between Windows directories to avoid system lockups.
+-> Git: The .gitignore file is configured to ignore these heavy files and avoid failures during GitHub pushes.
