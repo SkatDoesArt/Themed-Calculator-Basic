@@ -48,11 +48,11 @@ Note: The --no-build-cache option is recommended to ensure every build includes 
 
 ### 📱 PWA Installation
 The application is a certified PWA. To install it:
--> On iOS (Safari): Tap "Share" then "Add to Home Screen".
--> On Android (Chrome): Follow the installation banner or click the three dots > "Install App".
--> On PC: Click the installation icon in the browser address bar.
+- On iOS (Safari): Tap "Share" then "Add to Home Screen".
+- On Android (Chrome): Follow the installation banner or click the three dots > "Install App".
+- On PC: Click the installation icon in the browser address bar.
 
 ###⚠️ File Management on Windows
 Kotlin Multiplatform development generates very deep file structures (especially in .gradle), which can cause "Path too long" errors on Windows.
--> Tip: Never manually copy the build/ folder between Windows directories to avoid system lockups.
--> Git: The .gitignore file is configured to ignore these heavy files and avoid failures during GitHub pushes.
+- Tip: Never manually copy the build/ folder between Windows directories to avoid system lockups.
+- Git: The .gitignore file is configured to ignore these heavy files and avoid failures during GitHub pushes.
