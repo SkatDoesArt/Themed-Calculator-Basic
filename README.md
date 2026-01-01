@@ -32,7 +32,7 @@ This project demonstrates the capabilities of code sharing via Kotlin. The appli
 
 <img src="Reference/phoneTheme.png" alt="Phoneview">
 <img src="Reference/phoneTheme2.png" alt="Phoneview">
-<img src="Reference/phoneTheme3.png" alt="Phoneview">
+<img src="Reference/phoneTheme3.png" alt="Phoneview" height=500>
 
 
 ---
