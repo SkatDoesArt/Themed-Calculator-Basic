@@ -28,6 +28,14 @@ This project demonstrates the capabilities of code sharing via Kotlin. The appli
 * **Adaptive Display**: Perfect centering on PC and borderless full-screen mode on mobile.
 
 ---
+## 🎀 Themes ( Phone View )
+
+<img src="Reference/phoneTheme.png" alt="Phoneview">
+<img src="Reference/phoneTheme2.png" alt="Phoneview">
+<img src="Reference/phoneTheme3.png" alt="Phoneview">
+
+
+---
 
 ## 🚀 Development & Build Commands
 
