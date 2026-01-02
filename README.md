@@ -41,6 +41,14 @@ This project demonstrates the capabilities of code sharing via Kotlin. The appli
 
 Here are the essential commands to manage and test the project:
 
+### 🛠️ Prerequisites
+
+Before running the build commands, ensure you have the following installed:
+
+1. **JDK 17 or higher**: Kotlin Multiplatform requires Java Development Kit 17+.
+2. **Android Studio or IntelliJ IDEA**: For the best development experience with the Compose Multiplatform plugin.
+3. **Chrome or a Chromium-based browser**: Required for the Wasm target and debugging.
+
 ### 🛠️ Local Testing (Development)
 To launch the app with Hot Reload and debug tools:
 ```bash
